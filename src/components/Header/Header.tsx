@@ -1,5 +1,6 @@
 import React from 'react';
 import { createPortal } from 'react-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { GlobeIcon } from '@heroicons/react/outline';
@@ -24,6 +25,9 @@ export default function Header() {
   const { t } = useTranslation();
   const address = useAccount();
   const chainId = useChainId();
+
+  const location = useLocation();
+
   const networkError = (isTest && chainId === '1029') || (!isTest && chainId === '1');
 
   return (
@@ -36,17 +40,27 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <a href="/">
+            <Link to="/">
               <img className="h-8 w-auto sm:h-12" src={confistartIcon} alt="confistar-icon" />
-            </a>
+            </Link>
           </div>
           <Popover.Group as="nav" className="hidden md:flex space-x-10">
-            <a href="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <Link
+              to="/"
+              className={classNames(
+                'text-base font-medium',
+                location.pathname === '/' ? 'text-gray-900' : 'text-gray-500 hover:text-gray-900'
+              )}>
               {t('Header.home')}
-            </a>
-            <a href="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            </Link>
+            <Link
+              to="/stats"
+              className={classNames(
+                'text-base font-medium',
+                location.pathname === '/stats' ? 'text-gray-900' : 'text-gray-500 hover:text-gray-900'
+              )}>
               {t('Header.stats')}
-            </a>
+            </Link>
 
             <Popover className="relative">
               {({ open }) => (

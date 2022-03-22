@@ -1,0 +1,12 @@
+{
+    "Header": {
+        "home": "Inicio",
+        "stats": "Estadísticas",
+        "more": "Más",
+        "connect_fluent": "Conectar a Fluent",
+        "test_note": "Nota: ¡La página actual esta en modo desarrollo!",
+        "error": "Error:",
+        "unspport_network_switch_testnet": "Red no admitida, cámbiala en Fluent a: Conflux Testnet",
+        "unspport_network_switch_hydra": "Red no admitida, cámbiala en Fluent a: Conflux Hydra"
+    }
+}

@@ -31,20 +31,20 @@ export default function Header() {
   const networkError = (isTest && chainId === '1029') || (!isTest && chainId === '1');
 
   return (
-    <Popover className="relative bg-white">
+    <Popover className="relative">
       {isTest && (
         <div className="w-full h-[64px] leading-[64px] text-[#f3504f] bg-[#f3504f] bg-opacity-20 z-[49] text-[16px] text-center border-b border-[#f3504f]">
           {t('Header.test_note')}
         </div>
       )}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
-          <div className="flex justify-start lg:w-0 lg:flex-1">
+      <div className="max-w-7xl mx-auto bg-white">
+        <div className="flex justify-between items-center py-2 md:justify-start md:space-x-10">
+          <div className="flex justify-start items-center lg:w-0 lg:flex-1">
             <Link to="/">
               <img className="h-8 w-auto sm:h-12" src={confistartIcon} alt="confistar-icon" />
             </Link>
           </div>
-          <Popover.Group as="nav" className="hidden md:flex space-x-10">
+          <Popover.Group as="nav" className="flex items-center space-x-10">
             <Link
               to="/"
               className={classNames(
@@ -68,7 +68,7 @@ export default function Header() {
                   <Popover.Button
                     className={classNames(
                       open ? 'text-gray-900' : 'text-gray-500',
-                      'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                      'group bg-white	 rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                     )}>
                     <span>{t('Header.more')}</span>
                     <ChevronDownIcon
@@ -132,7 +132,7 @@ export default function Header() {
               )}
             </Popover>
           </Popover.Group>
-          <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+          <div className="flex items-center justify-end flex-1">
             <div className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
               <GlobeIcon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
               <div className="flex items-center ml-4">

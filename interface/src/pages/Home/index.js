@@ -105,7 +105,7 @@ function Home() {
       }
     }
     getData();
-  }, []);
+  }, [accountAddress]);
 
   const transferData = async (list) => {
     const arr = [];

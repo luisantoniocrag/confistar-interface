@@ -22,7 +22,7 @@ function App() {
         <Layout className="layout">
           <div className="flex flex-col h-full relative overflow-x-hidden">
             <Header />
-            <Content style={{ padding: "50px 50px",backgroundColor:'#2d3344' }}>
+            <Content style={{ padding: "50px 50px",backgroundColor:'#0d0415' }}>
               <div>
                 <Switch>
                   <Route path="/" exact>

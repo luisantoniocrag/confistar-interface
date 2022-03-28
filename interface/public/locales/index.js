@@ -1,6 +1,7 @@
 import i18n from 'i18next'
 import {initReactI18next} from 'react-i18next'
 import en from './en/translation.json';
+import es from './es/translation.json';
 import zh from './zh/translation.json';
 import id from './id/translation.json';
 import ko from './ko/translation.json';
@@ -15,6 +16,9 @@ i18n
     resources: {
       en: {
         translation: en
+      },
+      es: {
+        translation: es
       },
       zh: {
         translation: zh

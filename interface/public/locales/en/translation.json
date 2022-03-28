@@ -1,7 +1,7 @@
 {
   "Header": {
     "test_note": "Please note: the current page is a test environment!",
-    "pos_pool": "POS Pool",
+    "pos_pool": "Confistar CFX PoS Pool",
     "connect_portal": "Connect Fluent",
     "error": "Error:",
     "unspport_network_switch_testnet": "Unsupported network, please change it in the wallet: Conflux Testnet",

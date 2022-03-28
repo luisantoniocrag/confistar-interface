@@ -6,6 +6,7 @@ import {connect as tryActivate, useAccount, useChainId} from '@cfxjs/use-wallet'
 import { isTestNetEnv } from "../../../utils";
 import NotAllow from "../../../images/not-allow.png";
 import i18n from '../../../../public/locales';
+import { formatAddress } from '../../../utils/address';
 
 const { Option } = Select;
 const { Header } = Layout;
@@ -34,7 +35,7 @@ function HeaderComp() {
               <Option value="ko">Korean</Option>
               {/* <Option value="zh">中文</Option> */}
             </Select>
-            {address&&<div>{address}</div>}
+            {address&&<div>{formatAddress(address, chainId)}</div>}
             {!address&&<Button type='primary' onClick={tryActivate}>{t('Header.connect_portal')}</Button>}
           </div>
         </div>

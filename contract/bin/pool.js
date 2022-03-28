@@ -31,10 +31,12 @@ function getContractInfo(name) {
   }
 }
 
+console.log("env", process.env.CFX_RPC_URL)
+
 const conflux = new Conflux({
   url: process.env.CFX_RPC_URL,
   networkId: parseInt(process.env.CFX_NETWORK_ID),
-  // logger: console,
+  logger: console,
 });
 const account = conflux.wallet.addPrivateKey(process.env.PRIVATE_KEY);
 

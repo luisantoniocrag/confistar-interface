@@ -25,15 +25,15 @@ function HeaderComp() {
             {t('Header.test_note')}
           </div>
         }
-        <div className='flex justify-between text-white bg-main-back bg-opacity-0 px-[50px]'>
+        <div style={{ backgroundColor:"transparent", borderBottom: "1px solid #0d0415" }} className='flex justify-between text-white px-[50px]'>
           <Link to="/">{t('Header.pos_pool')}</Link>
           <div className='flex items-center'>
             <Select style={{ marginRight: '20px'}} defaultValue={i18n.language}  onChange={lng => i18n.changeLanguage(lng)}>
               <Option value="en">English</Option>
+              <Option value="es">Español</Option>
               <Option value="vn">Vietnamese</Option>
               <Option value="id">Indonesian</Option>
               <Option value="ko">Korean</Option>
-              {/* <Option value="zh">中文</Option> */}
             </Select>
             {address&&<div>{formatAddress(address, chainId)}</div>}
             {!address&&<Button type='primary' onClick={tryActivate}>{t('Header.connect_portal')}</Button>}

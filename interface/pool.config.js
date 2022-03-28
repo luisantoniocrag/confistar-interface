@@ -7,7 +7,7 @@ module.exports = {
     networkId: 1
   },
   mainnet: {
-    poolManagerAddress: 'cfx:xxxxmainnet',
+    poolManagerAddress: 'cfx:achn9wwtrt4v0ywy3t9jx6823jvgc2hbyum2jy117v',
     RPC: 'https://main.confluxrpc.com',
     networkId: 1029
   }
